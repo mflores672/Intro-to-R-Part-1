@@ -1,4 +1,6 @@
-   library(ggplot2)
+//Programed in R 
+
+library(ggplot2)
 
 // setting up variables 
   Farm<-c("MO","MO","MO","MO","LN","SE","QM")
