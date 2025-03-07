@@ -1,0 +1,23 @@
+   library(ggplot2)
+
+// setting up variables 
+  Farm<-c("MO","MO","MO","MO","LN","SE","QM")
+  Month<-c(11,7,7,1,9,9,11)
+  Year<-c(0,0,1,1,0,0,0)
+  Gender<-c(1,2,2,2,1,2,2)
+  LenghtCT<-c(75,85,91.6,95,85,105.5,108)
+  Ecervi<-c(1,0,0,1,0,1,0)
+  Tb<-c(0,0,1,1,0,0,0)
+
+// Creating the Datasheet (Table)
+  data<-cbind(Farm,Month,Year,Gender,LenghtCT,Ecervi,Tb)
+
+// Creating Scatterplots
+  ggplot(D,aes(x=LenghtCT,y=Tb))+geom_point()
+  ggplot(D,aes(x=LenghtCT,y=Gender))+geom_point()
+
+// Displaying Row 6
+  D[6,]
+
+  Record<-subset(data,Month==9&Year==3&Gender==2&LenghtCT==105.5&Tb==0) //Alternate Version
+  print(Record)
